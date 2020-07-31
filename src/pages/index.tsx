@@ -21,9 +21,6 @@ const IndexPage = () => {
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
-      <Link to="/page-2/">
-        <FormattedMessage id="go_page2" />
-      </Link>
     </Layout>
   )
 }
