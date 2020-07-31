@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Dmitriy Lopukhov`,
-    description: `Hi! I'm a front-end developer, using Angular, React and all the related stuff.`,
+    description: `Hi! I'm a front-end developer, I use Angular, React and all the related stuff.`,
     author: ``,
     keywords: `gatsby, react, hooks, localization, typescript`,
   },
