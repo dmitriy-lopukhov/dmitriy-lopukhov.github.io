@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-typescript-intl-starter",
+  "name": "dmitriy-lopukhov.github.io",
   "version": "1.0.0",
-  "description": "Starter repo for Gatsby (with typescript and intl)",
+  "description": "Personal website",
   "author": "Dmitriy Lopukhov <dmitriy.lopukhov@gmail.com>",
   "scripts": {
     "build": "gatsby build",
@@ -19,6 +19,8 @@
     "gatsby"
   ],
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "gatsby": "^2.22.3",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-intl": "^0.3.2",
@@ -33,12 +35,14 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
     "@types/react-helmet": "^5.0.15",
+    "@types/styled-components": "^5.1.1",
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.26",
     "gh-pages": "^3.1.0",

@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    keywords: `gatsby, react, hooks, localization, typescript`
+    title: `Dmitriy Lopukhov`,
+    description: `Hi! I'm a front-end developer, using Angular, React and all the related stuff.`,
+    author: ``,
+    keywords: `gatsby, react, hooks, localization, typescript`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -38,13 +38,13 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/intl/translations`,
         // supported language
-        languages: ['en', 'ru', 'de'],
+        languages: ["en", "ru", "de"],
         // language file path
-        defaultLanguage: 'en',
+        defaultLanguage: "en",
         // option to redirect to `/en` when connecting `/`
-        redirect: true,
+        redirect: false,
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
   ],
 }

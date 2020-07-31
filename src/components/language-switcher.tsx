@@ -1,37 +1,37 @@
 import React from "react"
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
-import { languages } from "../intl/languages"
+import { languages, LangKey } from "../intl/languages"
+import { Column, Container, Link } from "./styles"
 
-const languageName: { [key: string]: string } = languages.names
+const languageName = languages.names
 
 const LanguageSwitcher = () => {
   return (
-    <div>
+    <Column size={1} alignItems="flex-end">
       <IntlContextConsumer>
         {({
           languages,
           language: currentLocale,
         }: {
-          languages: string[]
-          language: string
-        }) =>
-          languages.map(language => (
-            <a
-              key={language}
-              onClick={() => changeLocale(language)}
-              style={{
-                color: currentLocale === language ? `yellow` : `white`,
-                margin: 10,
-                textDecoration: `underline`,
-                cursor: `pointer`,
-              }}
-            >
-              {languageName[language]}
-            </a>
-          ))
-        }
+          languages: LangKey[]
+          language: LangKey
+        }) => (
+          <Container>
+            {languages.map((language, index) => (
+              <span key={language}>
+                <Link
+                  active={currentLocale === language}
+                  onClick={() => changeLocale(language)}
+                >
+                  {languageName[language]}
+                </Link>
+                {index < languages.length - 1 ? " • " : null}
+              </span>
+            ))}
+          </Container>
+        )}
       </IntlContextConsumer>
-    </div>
+    </Column>
   )
 }
 

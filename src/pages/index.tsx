@@ -1,26 +1,25 @@
 import React from "react"
 import Layout from "../components/layout"
 import Image from "../components/image"
+import Content from "../components/content"
+import { Row, Column } from "../components/styles"
 import SEO from "../components/seo"
-import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
 const IndexPage = () => {
   const intl = useIntl()
+
   return (
     <Layout>
       <SEO lang={intl.locale} title={intl.formatMessage({ id: "title" })} />
-      <h1>
-        <FormattedMessage id="hello" />
-      </h1>
-      <p>
-        <FormattedMessage id="welcome" />
-      </p>
-      <p>
-        <FormattedMessage id="build" />
-      </p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
+      <Row>
+        <Column size={4}>
+          <Image />
+        </Column>
+        <Column size={6} justifyContent="space-between">
+          <Content intl={intl} />
+        </Column>
+      </Row>
     </Layout>
   )
 }
