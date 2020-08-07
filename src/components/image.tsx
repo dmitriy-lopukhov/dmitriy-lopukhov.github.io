@@ -16,7 +16,11 @@ const Image = () => {
   `)
 
   return (
-    <Img fluid={myPhoto.childImageSharp.fluid} style={{ height: "100%" }} />
+    <Img
+      fluid={myPhoto.childImageSharp.fluid}
+      style={{ height: "100%" }}
+      fadeIn={false}
+    />
   )
 }
 

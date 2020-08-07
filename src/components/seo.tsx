@@ -15,12 +15,21 @@ interface IParams {
 }
 
 const SEO = ({ description, lang, meta, title }: IParams) => {
-  const { site } = useStaticQuery(
+  const {
+    site,
+  }: {
+    site: {
+      siteMetadata: {
+        description: string
+        author: string
+        keywords: string
+      }
+    }
+  } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
             description
             author
             keywords
@@ -38,7 +47,7 @@ const SEO = ({ description, lang, meta, title }: IParams) => {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
