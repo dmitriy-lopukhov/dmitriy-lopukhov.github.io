@@ -1,5 +1,6 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle, css } from "styled-components"
 import CSS from "csstype"
+import { Link } from "gatsby"
 
 export const colors = {
   heading: "#5c7b8e",
@@ -107,9 +108,10 @@ export const Container = styled.div`
   }
 `
 
-export const Link = styled.a<{ active?: boolean }>`
+const link = css<{ active?: string }>`
   color: ${props => (props.active ? colors.heading : colors.black)};
   cursor: pointer;
+  text-decoration: none;
   transition: all ease-in 0.2s;
   &:hover {
     color: ${colors.heading};
@@ -119,6 +121,14 @@ export const Link = styled.a<{ active?: boolean }>`
     color: ${props => (props.active ? colors.heading : colors.white)};
   }
 `
+export const StyledLink = styled.a<{ active?: string }>`
+  ${link}
+`
+
+export const LangLink = styled(Link)<{ active?: string }>`
+  ${link}
+`
+
 export const Header = styled.h1`
   font-size: 3em;
   color: ${colors.black};
@@ -140,5 +150,17 @@ export const SocialLinks = styled.div`
   margin-bottom: 30px;
 `
 export const SocialIcon = styled.span`
+  display: inline-block;
   margin-right: 15px;
+
+  svg {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+  }
 `

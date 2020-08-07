@@ -1,7 +1,7 @@
 import React from "react"
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
+import { IntlContextConsumer } from "gatsby-plugin-intl"
 import { languages, LangKey } from "../intl/languages"
-import { Column, Container, Link } from "./styles"
+import { Column, Container, LangLink } from "./styles"
 
 const languageName = languages.names
 
@@ -19,12 +19,12 @@ const LanguageSwitcher = () => {
           <Container>
             {languages.map((language, index) => (
               <span key={language}>
-                <Link
-                  active={currentLocale === language}
-                  onClick={() => changeLocale(language)}
+                <LangLink
+                  to={"/" + language}
+                  active={currentLocale === language ? "active" : ""}
                 >
                   {languageName[language]}
-                </Link>
+                </LangLink>
                 {index < languages.length - 1 ? " • " : null}
               </span>
             ))}

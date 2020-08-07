@@ -1,18 +1,8 @@
 import React from "react"
-import {
-  Column,
-  Container,
-  Header,
-  SocialLinks,
-  SocialIcon,
-  Link,
-} from "./styles"
+import { Column, Container, Header, SocialLinks, StyledLink } from "./styles"
 import { FormattedMessage, IntlShape } from "gatsby-plugin-intl"
 import LanguageSwitcher from "../components/language-switcher"
-import Facebook from "@material-ui/icons/Facebook"
-import Linkedin from "@material-ui/icons/Linkedin"
-import Email from "@material-ui/icons/Email"
-import GitHub from "@material-ui/icons/GitHub"
+import Icon from "./Icon"
 
 const Content = ({ intl }: { intl: IntlShape }) => {
   const keywords = [
@@ -66,29 +56,21 @@ const Content = ({ intl }: { intl: IntlShape }) => {
             ))}
           </p>
           <SocialLinks>
-            <Link href="https://www.linkedin.com/in/dmitriylopukhov/">
-              <SocialIcon>
-                <Linkedin />
-              </SocialIcon>
-            </Link>
+            <StyledLink href="https://www.linkedin.com/in/dmitriylopukhov/">
+              <Icon type="Linkedin" />
+            </StyledLink>
 
-            <Link href="https://github.com/dmitriy-lopukhov">
-              <SocialIcon>
-                <GitHub />
-              </SocialIcon>
-            </Link>
+            <StyledLink href="https://github.com/dmitriy-lopukhov">
+              <Icon type="GitHub" />
+            </StyledLink>
 
-            <Link href="https://www.facebook.com/lopukhov.dmitriy">
-              <SocialIcon>
-                <Facebook />
-              </SocialIcon>
-            </Link>
+            <StyledLink href="https://www.facebook.com/lopukhov.dmitriy">
+              <Icon type="Facebook" />
+            </StyledLink>
 
-            <Link href="mailto:dmitriy.lopukhov@gmail.com">
-              <SocialIcon>
-                <Email />
-              </SocialIcon>
-            </Link>
+            <StyledLink href="mailto:dmitriy.lopukhov@gmail.com">
+              <Icon type="Email" />
+            </StyledLink>
           </SocialLinks>
         </Container>
       </Column>
