@@ -1,4 +1,4 @@
-const langKeys = ["en", "ru", "de"] as const
+const langKeys = ["en", "ru", "de", "no"] as const
 export type LangKey = typeof langKeys[number]
 
 interface ILanguages {
@@ -14,5 +14,6 @@ export const languages: ILanguages = {
     en: "English",
     ru: "Русский",
     de: "Deutsch",
+    no: "Norsk (Bokmål)",
   },
 }

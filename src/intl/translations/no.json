@@ -1,0 +1,12 @@
+{
+  "title": "Dmitriy Lopukhov",
+  "hello": "Hei, jeg heter",
+  "myname": "Dmitriy Lopukhov",
+  "description": "Jeg er en frontend-utvikler med 9 års erfaring. Jeg jobber primært med Angular, og også med React. For begge bruker jeg Typescript. Jeg også jobbet ofte med UI / UX-utvikling tidligere, og mener at UX er kjempe viktig for webutvikling. Jeg har lang erfaring med å organisere riktig arkitektur for optimaliserte og performante SPAer, skrive integrasjonstester (bruker mest Cypress for dette). Pålitelighet og testbarhet av applikasjonen er nøkkelfaktorer for meg. I tillegg har jeg også jobbet med AngularJS, VueJS, Backbone og selvfølgelig JQuery. Samtidig er jeg også kjent med andre ting som NestJS, GatsbyJS, NextJS, Ionic Framework. I tillegg til jobb like jeg også å delta i forskjellige IT-arrangementer, Meetups og Hackathons.",
+  "and_sure": "og selvfølgelig",
+  "keywords": "Keywords",
+  "notfound": {
+    "header": "NOT FOUND",
+    "description": "You just hit a route that doesn't exist... the sadness."
+  }
+}
