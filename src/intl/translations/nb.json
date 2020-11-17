@@ -6,7 +6,7 @@
   "and_sure": "og selvfølgelig",
   "keywords": "Keywords",
   "notfound": {
-    "header": "NOT FOUND",
-    "description": "You just hit a route that doesn't exist... the sadness."
+    "header": "IKKE FUNNET",
+    "description": "Du treffer en død lenke eller som ikke eksisterer... tristheten."
   }
 }

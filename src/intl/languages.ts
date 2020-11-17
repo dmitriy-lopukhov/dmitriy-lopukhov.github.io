@@ -1,4 +1,4 @@
-const langKeys = ["en", "ru", "de", "no"] as const
+const langKeys = ["en", "ru", "de", "nb"] as const
 export type LangKey = typeof langKeys[number]
 
 interface ILanguages {
@@ -14,6 +14,6 @@ export const languages: ILanguages = {
     en: "English",
     ru: "Русский",
     de: "Deutsch",
-    no: "Norsk (Bokmål)",
+    nb: "Norsk (Bokmål)", // https://github.com/formatjs/formatjs/issues/1570
   },
 }
